@@ -10,7 +10,25 @@ public class Principal {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Persona persona1 = new Persona();
+        persona1.mostrarEstado();
+        persona1.setApellido("Capurro");
+        persona1.setNombre("Martin");
+        persona1.setAñoDeNacimiento(1985);
+        persona1.mostrarEstado();
+        persona1.setNombreCompleto("Alberto", "Ojeda");
+        persona1.mostrarEstado();
+        System.out.println("La edad es: " + persona1.getEdad());
+        int edadTest = 22;
+        if(persona1.esMayorQue(edadTest))
+            System.out.println("Su edad es mayor que " + edadTest + " : verdadero");
+        else
+            System.out.println("Su edad es mayor que " + edadTest + " : falso");
+        edadTest = 44;
+        if(persona1.esMayorQue(edadTest))
+            System.out.println("Su edad es mayor que " + edadTest + " : verdadero");
+        else
+            System.out.println("Su edad es mayor que " + edadTest + " : falso");
+        
     }
-    
 }
