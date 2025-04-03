@@ -1,0 +1,16 @@
+# Archivos generados que se pueden ignorar
+/nbproject/private/
+/nbproject/build-impl.xml
+/nbproject/genfiles.properties
+/manifest.mf
+
+# Directorios de compilación y distribución
+/build/
+/nbbuild/
+/dist/
+/nbdist/
+
+# Archivos temporales y logs
+*.class
+*.log
+*.tmp
