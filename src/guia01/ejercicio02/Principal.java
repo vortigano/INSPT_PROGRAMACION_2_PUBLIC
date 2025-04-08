@@ -13,7 +13,7 @@ package guia01.ejercicio02;
 
 /**
  *
- * @author neo64
+ * @author Alberto Martín Capurro
  */
 public class Principal {
 
@@ -21,7 +21,17 @@ public class Principal {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        
+        Empleado emp02 = new Empleado(5678, "Juan", "Perez", 60000, Empleado.EstadoCivil.CASADO, 3);
+        Empleado emp03 = new Empleado(4321, "Lucia", "Gomez", 45000, Empleado.EstadoCivil.VIUDO, 5);
+        Empleado emp04 = new Empleado(8765, "Carlos", "Ruiz", 52000, Empleado.EstadoCivil.SOLTERO, 4);
+
+        System.out.println(emp02);
+        //System.out.println("Salario final: " + emp02.obtenerSalarioFinal());
+        System.out.printf("Salario final: $%.2f\n", emp02.obtenerSalarioFinal());
+        System.out.println(emp03);
+        System.out.println("Salario final: " + emp03.obtenerSalarioFinal());
+        System.out.println(emp04);
+        System.out.println("Salario final: " + emp04.obtenerSalarioFinal());
     }
     
 }
