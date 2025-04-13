@@ -20,7 +20,18 @@ public class Principal {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        CuentaBancaria cuenta01 = new CuentaBancaria(CuentaBancaria.TipoDeCuenta.CAJA_DE_AHORRO);
         
+        System.out.println(cuenta01.toString());
+        cuenta01.depositar(12);
+        cuenta01.mostrarDatos();
+        cuenta01.depositar(-12);
+        cuenta01.mostrarDatos();
+        cuenta01.extraer(16);
+        cuenta01.mostrarDatos();
+        cuenta01.extraer(8.50);
+        System.out.println("Saldo : " + cuenta01.getSaldo());
+        System.out.println("Ultimos 3 digitos: " + cuenta01.getUltimosTresDigitosCBU());
     }
     
 }
