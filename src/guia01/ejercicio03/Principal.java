@@ -1,10 +1,10 @@
-package Principal;
+package guia01.ejercicio03;
 
 /**
  *
  * @author Alberto Martín Capurro
  */
-public class java {
+public class Principal {
 
     /**
      * @param args the command line arguments
