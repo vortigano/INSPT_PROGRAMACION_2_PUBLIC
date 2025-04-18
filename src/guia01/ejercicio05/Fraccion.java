@@ -14,6 +14,31 @@ public class Fraccion {
         setDenominador(denominador);
     }
     
+    public void sumaFraccion(Fraccion sumando)
+    {
+        // sumando = c/d
+        // a/b + c/d = (( a*d ) + ( c*b )) / ( b*d )
+        // numerador = (( a*d ) + ( c*b ))   denominador=   ( b*d )
+        // <num> / <den> + c / d = 
+        //     <num> /b + c/d = (( <num> * d ) + ( <den> * b )) / ( <den> * d )
+        
+        int c = sumando.getNumerador();
+        int d = sumando.getDenominador();
+        
+        setNumerador    ( ( getNumerador() * d ) + ( c * getDenominador() ) );
+        setDenominador  ( getDenominador() * d);
+    }
+    
+    public int getDenominador()
+    {
+        return denominador;
+    }
+    
+    public int getNumerador()
+    {
+        return numerador;
+    }
+    
     public void sumaEntero(int numeroEntero)
     {
         numerador += (numeroEntero * denominador);
@@ -29,7 +54,10 @@ public class Fraccion {
         if(denominador != 0)
             this.denominador = denominador;
         else
+        {
+            setNumerador(0);
             this.denominador = 1;
+        }
     }
 
     public double get_valor_decimal()

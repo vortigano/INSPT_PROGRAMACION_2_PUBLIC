@@ -4,7 +4,7 @@
     ▪ [OK] Mostrarse en consola, con el formato "numerador/denominador".
     ▪ [OK] Obtener el valor decimal.
     ▪ [OK] Sumarle un entero.
-    ▪ [] Sumarle una fracción.
+    ▪ [OK] Sumarle una fracción.
     ▪ [] Simplificar la fracción.
     ▪ [] Saber si la fracción es propia, impropia u aparente.
     Finalmente, instanciá una fracción en el método main y probá todos sus 
@@ -33,6 +33,10 @@ public class Principal {
         System.out.println("El valor decimal es: " + frac.get_valor_decimal());
         System.out.println("---- Sumar entero ----");
         frac.sumaEntero(7);
+        frac.mostrar();
+        System.out.println("El valor decimal es: " + frac.get_valor_decimal());
+        System.out.println("---- Suma fraccion ----");
+        frac.sumaFraccion(new Fraccion(1,-2));
         frac.mostrar();
         System.out.println("El valor decimal es: " + frac.get_valor_decimal());
         
