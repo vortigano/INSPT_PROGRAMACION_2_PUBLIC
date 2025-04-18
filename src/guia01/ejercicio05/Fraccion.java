@@ -14,6 +14,45 @@ public class Fraccion {
         setDenominador(denominador);
     }
     
+    private int getMCD(int num_a, int num_b)
+    {
+        int min = (num_a>num_b) ? (num_b) : (num_a);
+        int max = (num_a>num_b) ? (num_a) : (num_b);
+        //System.out.println(num_a);
+        //System.out.println(num_b);
+		
+        int mcd = 1;
+		
+	for(int i=2; i<=Math.abs(min); i++)
+	{
+ 	  if(Math.abs(min) % i == 0 && Math.abs(max) % i == 0)
+ 	  {
+ 	    //System.out.print("> " + i + " ");
+ 	    mcd = i;
+ 	  }
+	}
+	  
+	//System.out.println("");
+	//System.out.println("MCD " + mcd );
+	return mcd;
+    }
+    
+    public void simplificar()
+    {
+        int mcd = getMCD(numerador, denominador);
+        numerador   /= mcd;
+        denominador /= mcd;
+        
+        // si el denominador es negativo 
+        // invierte el signo en numerador y denominador
+        
+        if(denominador <0)
+        {
+            denominador *=-1;
+            numerador   *=-1;
+        }
+    }
+    
     public void sumaFraccion(Fraccion sumando)
     {
         // sumando = c/d
