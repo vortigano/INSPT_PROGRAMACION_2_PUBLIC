@@ -14,6 +14,11 @@ public class Fraccion {
         setDenominador(denominador);
     }
     
+    public void sumaEntero(int numeroEntero)
+    {
+        numerador += (numeroEntero * denominador);
+    }
+    
     public void setNumerador(int numerador)
     {
         this.numerador = numerador;

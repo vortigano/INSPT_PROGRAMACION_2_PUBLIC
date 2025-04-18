@@ -3,7 +3,7 @@
     denominador. Luego, implementá métodos que permitan:
     ▪ [OK] Mostrarse en consola, con el formato "numerador/denominador".
     ▪ [OK] Obtener el valor decimal.
-    ▪ [] Sumarle un entero.
+    ▪ [OK] Sumarle un entero.
     ▪ [] Sumarle una fracción.
     ▪ [] Simplificar la fracción.
     ▪ [] Saber si la fracción es propia, impropia u aparente.
@@ -28,9 +28,14 @@ public class Principal {
      */
     public static void main(String[] args) {
         System.out.println("Ejercicio 05");
-        Fraccion frac = new Fraccion(10, 15);
+        Fraccion frac = new Fraccion(1, 2);
         frac.mostrar();
         System.out.println("El valor decimal es: " + frac.get_valor_decimal());
+        System.out.println("---- Sumar entero ----");
+        frac.sumaEntero(7);
+        frac.mostrar();
+        System.out.println("El valor decimal es: " + frac.get_valor_decimal());
+        
     }
     
 }
