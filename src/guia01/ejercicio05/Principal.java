@@ -2,7 +2,7 @@
     Modelá la clase Fraccion, la cual posea como atributos numerador y
     denominador. Luego, implementá métodos que permitan:
     ▪ [OK] Mostrarse en consola, con el formato "numerador/denominador".
-    ▪ [] Obtener el valor decimal.
+    ▪ [OK] Obtener el valor decimal.
     ▪ [] Sumarle un entero.
     ▪ [] Sumarle una fracción.
     ▪ [] Simplificar la fracción.
@@ -28,8 +28,9 @@ public class Principal {
      */
     public static void main(String[] args) {
         System.out.println("Ejercicio 05");
-        Fraccion frac = new Fraccion();
+        Fraccion frac = new Fraccion(10, 15);
         frac.mostrar();
+        System.out.println("El valor decimal es: " + frac.get_valor_decimal());
     }
     
 }
