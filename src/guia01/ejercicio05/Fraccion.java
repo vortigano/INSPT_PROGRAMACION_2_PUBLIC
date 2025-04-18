@@ -14,6 +14,25 @@ public class Fraccion {
         setDenominador(denominador);
     }
     
+    public FraccionTipo getTipo() {
+        //simplificar();
+        
+        FraccionTipo tipo;
+        if(denominador != 0)
+        {
+            if (Math.abs(numerador) % Math.abs(denominador) == 0) {
+                tipo = FraccionTipo.APARENTE;
+            } else if(Math.abs(numerador) > Math.abs(denominador)) {
+                tipo = FraccionTipo.IMPROPIA;
+            } else {
+                tipo = FraccionTipo.PROPIA;
+            }
+        }
+        else
+            tipo = FraccionTipo.INVALIDA;
+        return tipo;
+    } 
+    
     private int getMCD(int num_a, int num_b)
     {
         int min = (num_a>num_b) ? (num_b) : (num_a);
@@ -94,8 +113,10 @@ public class Fraccion {
             this.denominador = denominador;
         else
         {
-            setNumerador(0);
-            this.denominador = 1;
+            System.out.println("Error, el denominador no puede ser cero!");
+            System.exit(-1);
+            //setNumerador(0);
+            //this.denominador = 1;
         }
     }
 

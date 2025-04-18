@@ -6,7 +6,7 @@
     ▪ [OK] Sumarle un entero.
     ▪ [OK] Sumarle una fracción.
     ▪ [OK] Simplificar la fracción.
-    ▪ [] Saber si la fracción es propia, impropia u aparente.
+    ▪ [OK] Saber si la fracción es propia, impropia u aparente.
     Finalmente, instanciá una fracción en el método main y probá todos sus 
     métodos.
 
@@ -27,21 +27,30 @@ public class Principal {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        // 3  / 5   propia
+        // -3 / 5   propia
+        // 7  / 4   impropia
+        // -7 / 4   impropia
+        // 6  / 3   aparente
+        // -6 / 3   aparente
+        // 0 / 1    aparente
+        // 0 / -3   aparente
+        // 0 / 3    aparente
         System.out.println("Ejercicio 05");
-        Fraccion frac = new Fraccion(8,-3);
+        Fraccion frac = new Fraccion(0,-3);
         frac.mostrar();
         System.out.println("El valor decimal es: " + frac.get_valor_decimal());
         System.out.println("---- Sumar entero ----");
-        frac.sumaEntero(7);
+        frac.sumaEntero(0);
         frac.mostrar();
         System.out.println("El valor decimal es: " + frac.get_valor_decimal());
         System.out.println("---- Suma fraccion ----");
         System.out.println("      Simplifica ");
-        frac.sumaFraccion(new Fraccion(-8,2));
+        frac.sumaFraccion(new Fraccion(0,1));
         frac.simplificar();
         frac.mostrar();
         System.out.println("El valor decimal es: " + frac.get_valor_decimal());
-        
+        System.out.println("La fraccion es: " + frac.getTipo());
     }
     
 }
