@@ -1,12 +1,12 @@
 /*
     Modelá la clase Fraccion, la cual posea como atributos numerador y
     denominador. Luego, implementá métodos que permitan:
-    ▪ Mostrarse en consola, con el formato "numerador/denominador".
-    ▪ Obtener el valor decimal.
-    ▪ Sumarle un entero.
-    ▪ Sumarle una fracción.
-    ▪ Simplificar la fracción.
-    ▪ Saber si la fracción es propia, impropia u aparente.
+    ▪ [OK] Mostrarse en consola, con el formato "numerador/denominador".
+    ▪ [] Obtener el valor decimal.
+    ▪ [] Sumarle un entero.
+    ▪ [] Sumarle una fracción.
+    ▪ [] Simplificar la fracción.
+    ▪ [] Saber si la fracción es propia, impropia u aparente.
     Finalmente, instanciá una fracción en el método main y probá todos sus 
     métodos.
 
@@ -28,6 +28,8 @@ public class Principal {
      */
     public static void main(String[] args) {
         System.out.println("Ejercicio 05");
+        Fraccion frac = new Fraccion();
+        frac.mostrar();
     }
     
 }
