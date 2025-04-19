@@ -1,5 +1,7 @@
 package guia01.ejercicio03;
 
+import guia01.ejercicio01.Persona;
+import guia01.ejercicio04.Fecha;
 import java.util.Random;
 
 public class CuentaBancaria {
@@ -8,6 +10,13 @@ public class CuentaBancaria {
   private         String        cbu; //22 digitos
   private         TipoDeCuenta  tipoDeCuenta;
   private         double        saldo;
+  /*
+    10) Refactoreá la clase CuentaBancaria del ejercicio 3), agregando el atributo
+    titular, que representa a la persona titular de la cuenta, y el atributo 
+    fechaDeApertura.
+  */
+  private Persona titular;        // persona titular de la cuenta
+  private Fecha   fechaDeApertura;
   
   /*
   Obtener el saldo actual.
@@ -17,7 +26,8 @@ public class CuentaBancaria {
   ▪ Obtener los últimos 3 dígitos del cbu.
   */
   
-  public CuentaBancaria(String cbu, TipoDeCuenta tipoDeCuenta, double saldo)
+  public CuentaBancaria(String cbu, TipoDeCuenta tipoDeCuenta, double saldo, 
+          Persona titular, Fecha fechaDeApertura)
   {
     if( cbu ==  null)
       cbu = "";
@@ -32,6 +42,32 @@ public class CuentaBancaria {
     }
     setTipoDeCuenta(tipoDeCuenta);
     setSaldo(saldo);
+    setTitular(titular);
+    setFechaDeApertura(fechaDeApertura);
+  }
+  
+  void setTitular(Persona titular)
+  {
+    if(titular != null)
+    {
+      this.titular = titular;
+    }
+    else
+    {
+      System.out.println("Persona no valida, falta titular");
+    }
+  }
+  
+  void setFechaDeApertura(Fecha fechaDeApertura)
+  {
+    if(fechaDeApertura!=null)
+    {
+      this.fechaDeApertura = fechaDeApertura;
+    }
+    else
+    {
+      System.out.println("Fecha de apertura no valida, falta fecha de apertura");
+    }
   }
   
   private void setSaldo(double saldo)
@@ -94,10 +130,16 @@ public class CuentaBancaria {
   {
       System.out.println(this.toString());
   }
-  
+
   @Override
   public String toString() {
-      return "CuentaBancaria{" + "CBU=" + cbu + ", tipoDeCuenta=" + tipoDeCuenta + ", saldo=" + saldo + '}';
+    return "CuentaBancaria \n" 
+            + " CBU_LEN = " + CBU_LEN 
+            + ", cbu = " + cbu 
+            + ", tipoDeCuenta = " + tipoDeCuenta 
+            + ", saldo = " + saldo 
+            + ",\n titular = " + titular.toString()
+            + "\n fechaDeApertura = " + fechaDeApertura ;
   }
   
   private String crearCBU()

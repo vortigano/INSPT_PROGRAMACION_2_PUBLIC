@@ -14,8 +14,16 @@
     ▪ Establecer sus atributos como privados y colocar los getters/setters que
       correspondan.
     ▪ Implementar el método toString() y comprobar su funcionamiento.
+
+  10) Refactoreá la clase CuentaBancaria del ejercicio 3), agregando el atributo
+    titular, que representa a la persona titular de la cuenta, y el atributo 
+    fechaDeApertura.
 */
 package guia01.ejercicio03;
+
+import guia01.ejercicio01.Persona;
+import guia01.ejercicio04.Fecha;
+import guia01.ejercicio09.Domicilio;
 
 /**
  *
@@ -28,11 +36,21 @@ public class Principal {
      */
     public static void main(String[] args) {
         //CuentaBancaria cuenta01 = new CuentaBancaria(TipoDeCuenta.CAJA_DE_AHORRO);
+        Persona titularDeCuenta01 = new Persona(
+                "Homero",
+                "Simpson",
+                new Fecha(12,5,1990),
+                new Domicilio("Calle 1", 123, "Barrio Rojo"));
+        
         CuentaBancaria cuenta01 = 
                 new CuentaBancaria(
                         "12345678901234589012",
                         TipoDeCuenta.CAJA_DE_AHORRO, 
-                        1000);
+                        1000,
+                        titularDeCuenta01,
+                        new Fecha(12,12,2008)
+                );
+        
         System.out.println(cuenta01.toString());
         cuenta01.depositar(12);
         cuenta01.mostrarDatos();
