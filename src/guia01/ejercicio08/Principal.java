@@ -16,6 +16,7 @@
     Devuelve una cadena que representa un valor de password aleatorio cuya 
     longitud coincida con el parámetro recibido. Si el parámetro es menor que 6,
     devuelve null.
+
     Además, deben poder crearse passwords con o sin valor inicial, por ello es
     que la clase contará con un constructor sobrecargado:
 
