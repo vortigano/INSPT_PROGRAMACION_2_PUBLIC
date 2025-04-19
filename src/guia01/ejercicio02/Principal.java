@@ -8,6 +8,12 @@
      sea soltero.
      Desarrollar el método obtenerSalarioFinal() que retorne el valor del 
      salario del empleado según las reglas enunciadas.
+  6) Refactoreá las clases de los cuatros ejercicios anteriores (5,4,3,2)
+    con los siguientes cambios:
+    ▪ Agregar un constructor que inicialice todos sus atributos por parámetro.
+    ▪ Establecer sus atributos como privados y colocar los getters/setters que
+      correspondan.
+    ▪ Implementar el método toString() y comprobar su funcionamiento.
 */
 package guia01.ejercicio02;
 

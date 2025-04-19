@@ -5,6 +5,13 @@
   ▪ Saber si es Navidad.
   ▪ Sumar un mes.
   Finalmente, instanciá una fecha en el método main y probá todos sus métodos.
+
+  6) Refactoreá las clases de los cuatros ejercicios anteriores con los 
+    siguientes cambios:
+    ▪ Agregar un constructor que inicialice todos sus atributos por parámetro.
+    ▪ Establecer sus atributos como privados y colocar los getters/setters que 
+      correspondan.
+    ▪ Implementar el método toString() y comprobar su funcionamiento.
 */
 package guia01.ejercicio04;
 
@@ -28,15 +35,15 @@ public class Principal {
         System.out.println(date3);
         
         
-        System.out.println("¿Es Navidad?: " + date2.esNavidad()); //1
+        System.out.println("Es Navidad?: " + date2.esNavidad()); //1
         //1 es equivalente a 2.1+2.2
         Boolean natal = date2.esNavidad(); //2.1
-        System.out.println("¿Es Navidad?: " + natal); //2.2
+        System.out.println("Es Navidad?: " + natal); //2.2
         
         System.out.println(date4);
-        System.out.println("¿Es Navidad?: " + date4.esNavidad());
+        System.out.println("Es Navidad?: " + date4.esNavidad());
         Boolean nata2 = date4.esNavidad(); //2.1
-        System.out.println("¿Es Navidad?: " + nata2); //2.2
+        System.out.println("Es Navidad?: " + nata2); //2.2
         
         date3.sumarMes();
         System.out.println(date3);

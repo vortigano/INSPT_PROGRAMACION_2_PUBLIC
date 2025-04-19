@@ -7,6 +7,13 @@
   ▪ Extraer dinero de la cuenta (actualizando el saldo). Solo puede quedar en 
   saldo negativo si es cuenta corriente.
   ▪ Obtener los últimos 3 dígitos del CBU.
+
+  6) Refactoreá las clases de los cuatros ejercicios anteriores (5,4,3,2)
+    con los siguientes cambios:
+    ▪ Agregar un constructor que inicialice todos sus atributos por parámetro.
+    ▪ Establecer sus atributos como privados y colocar los getters/setters que
+      correspondan.
+    ▪ Implementar el método toString() y comprobar su funcionamiento.
 */
 package guia01.ejercicio03;
 
@@ -20,8 +27,12 @@ public class Principal {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        CuentaBancaria cuenta01 = new CuentaBancaria(CuentaBancaria.TipoDeCuenta.CAJA_DE_AHORRO);
-        
+        //CuentaBancaria cuenta01 = new CuentaBancaria(TipoDeCuenta.CAJA_DE_AHORRO);
+        CuentaBancaria cuenta01 = 
+                new CuentaBancaria(
+                        "12345678901234589012",
+                        TipoDeCuenta.CAJA_DE_AHORRO, 
+                        1000);
         System.out.println(cuenta01.toString());
         cuenta01.depositar(12);
         cuenta01.mostrarDatos();

@@ -3,11 +3,11 @@ package guia01.ejercicio03;
 import java.util.Random;
 
 public class CuentaBancaria {
-  public static enum TipoDeCuenta { CAJA_DE_AHORRO, CUENTA_CORRIENTE };
-    
-  private final String cbu; //22 digitos
-  private final TipoDeCuenta tipoDeCuenta;
-  private Double saldo;
+  
+  private final   int           CBU_LEN = 22;
+  private         String        cbu; //22 digitos
+  private         TipoDeCuenta  tipoDeCuenta;
+  private         double        saldo;
   
   /*
   Obtener el saldo actual.
@@ -16,6 +16,33 @@ public class CuentaBancaria {
   saldo negativo si es cuenta corriente.
   ▪ Obtener los últimos 3 dígitos del cbu.
   */
+  
+  public CuentaBancaria(String cbu, TipoDeCuenta tipoDeCuenta, double saldo)
+  {
+    if( cbu ==  null)
+      cbu = "";
+      
+    if( cbu.length() != CBU_LEN)
+    {
+      this.cbu = crearCBU();
+    }
+    else
+    {
+      this.cbu = cbu;
+    }
+    setTipoDeCuenta(tipoDeCuenta);
+    setSaldo(saldo);
+  }
+  
+  private void setSaldo(double saldo)
+  {
+    this.saldo = saldo;
+  }
+  
+  private void setTipoDeCuenta(TipoDeCuenta tipoDeCuenta)
+  {
+    this.tipoDeCuenta = tipoDeCuenta;
+  }
   
   public CuentaBancaria(TipoDeCuenta tipoDeCuenta)
   {
@@ -73,7 +100,7 @@ public class CuentaBancaria {
       return "CuentaBancaria{" + "CBU=" + cbu + ", tipoDeCuenta=" + tipoDeCuenta + ", saldo=" + saldo + '}';
   }
   
-  private String crearCBU ()
+  private String crearCBU()
   {
       Random rnd = new Random();
       String cbuLocal = "";
