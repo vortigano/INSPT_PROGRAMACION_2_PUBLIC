@@ -39,6 +39,20 @@ public class Principal {
    */
   public static void main(String[] args) {
     System.out.println("Ejercicio 08");
+    //Password pwd_01 = new Password();
+    Password pwd_01 = new Password("contr");
+    
+    pwd_01.mostrar();
+    System.out.println("---       nuevo valor       ---");
+    System.out.println("Intenta cambiar password: " + pwd_01.nuevoValor("12345678"));
+    pwd_01.mostrar();
+    System.out.println("---   nuevo valor corto valido   ---");
+    System.out.println("Intenta cambiar password: " + pwd_01.nuevoValor("abcdef"));
+    pwd_01.mostrar();
+    System.out.println("---   nuevo valor corto no valido ---");
+    System.out.println("Intenta cambiar password: " + pwd_01.nuevoValor("1234"));
+    pwd_01.mostrar();
+    
   }
   
 }

@@ -1,11 +1,16 @@
 package guia01.ejercicio08;
 
+import java.util.Random;
+
 /**
  *
  * @author Alberto Martín Capurro
  */
 public class Password {
-  private String pass;
+  private final int   PASSWORD_FUERTE_LEN_MINIMA            = 8;
+  private final int   PASSWORD_LONGITUD_MINIMA_POR_DEFECTO  = 6;
+  private final int   PASSWORD_LONGITUD_MINIMA_AL_CAMBIAR   = 6;
+  private String      pass;
   
   
   /**
@@ -14,15 +19,15 @@ public class Password {
    * @param pass Contraseña propuesta para la contraseña
    */
   public Password(String pass){
-    
+    this();
+    this.nuevoValor(pass);
   }
   
   /**
    *  Crea un password cuyo valor se crea automáticamente.
-   * 
    */
   public Password(){
-    
+    pass = generarAleatorio(PASSWORD_LONGITUD_MINIMA_POR_DEFECTO);
   }
   
   /**
@@ -33,7 +38,7 @@ public class Password {
   */
   public boolean esFuerte()
   {
-    return false;
+    return pass.length() >= PASSWORD_FUERTE_LEN_MINIMA;
   }
   
   /**
@@ -47,7 +52,17 @@ public class Password {
    */
   public boolean nuevoValor(String pass)
   {
-    return false;
+    boolean pudoEstablecerse = false;
+    if(pass==null)
+      pass="";
+    
+    if(pass.length()>= PASSWORD_LONGITUD_MINIMA_POR_DEFECTO)
+    {
+      this.pass = pass;
+      pudoEstablecerse = true;
+    }
+    
+    return pudoEstablecerse;
   }
   
   /**
@@ -61,7 +76,25 @@ public class Password {
    */
   public String generarAleatorio(int len)
   {
-    return (len>=6 ? "123456" : null);
+    String retorno = null;
+    
+    if(len >= PASSWORD_LONGITUD_MINIMA_AL_CAMBIAR)
+    {
+      retorno = "";
+      Random rnd = new Random();
+      char temp;
+      
+      for(int i=0; i<len; i++)
+      {
+        temp    = (char) rnd.nextInt('A', 'z'+1);
+        retorno += temp;
+      }
+    }
+    return retorno;
+  }
+
+  public void mostrar() {
+    System.out.println("Password: " + pass);
   }
   
   
