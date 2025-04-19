@@ -14,6 +14,10 @@
     ▪ Establecer sus atributos como privados y colocar los getters/setters que
       correspondan.
     ▪ Implementar el método toString() y comprobar su funcionamiento.
+
+  10) Refactoreá la clase CuentaBancaria del ejercicio 3), agregando el atributo
+    titular, que representa a la persona titular de la cuenta, y el atributo 
+    fechaDeApertura.
 */
 package guia01.ejercicio03;
 
