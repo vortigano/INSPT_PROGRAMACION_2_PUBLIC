@@ -1,5 +1,6 @@
 /*
-  1) Modelá la clase Persona, la cual posea como atributos nombre, apellido y año de nacimiento.
+  1) Modelá la clase Persona, la cual posea como atributos nombre, apellido y 
+    año de nacimiento.
     Luego, implementá métodos que permitan:
     ▪ Devolver el nombre completo de la persona.
     ▪ Mostrar su estado en la consola.
@@ -8,9 +9,17 @@
     ▪ Cambiar su nombre.
     ▪ Cambiar su apellido.
     ▪ Cambiar su nombre y su apellido.
-    Finalmente, instanciá una persona en el método main y probá todos sus métodos.
+    Finalmente, instanciá una persona en el método main y probá todos sus 
+    métodos.
+
+  9) Refactoreá la clase Persona del ejercicio 1), cambiando el año de 
+    nacimiento por su fecha de nacimiento y agregando el atributo domicilio,
+    que contenga calle, altura y barrio.
 */
 package guia01.ejercicio01;
+
+import guia01.ejercicio04.Fecha;
+import guia01.ejercicio09.Domicilio;
 
 /**
  *
@@ -23,10 +32,23 @@ public class Principal {
      */
     public static void main(String[] args) {
         Persona persona1 = new Persona();
+        Persona persona2 = new Persona(
+                "Homero",
+                "Simpson",
+                new Fecha(12,5,1990),
+                new Domicilio(
+                        "Siempre Viva",
+                        123,
+                        "Springfield")
+        );
+        persona2.mostrarEstado();
+        System.out.println("Edad: " + persona2.getEdad());
+        
         persona1.mostrarEstado();
         persona1.setApellido("Capurro");
         persona1.setNombre("Martin");
         persona1.setAñoDeNacimiento(1985);
+        persona1.setDomicilio(new Domicilio("Av. Triunvirato", 3000, "Villa Ortuzar"));
         persona1.mostrarEstado();
         persona1.setNombreCompleto("Alberto", "Ojeda");
         persona1.mostrarEstado();
