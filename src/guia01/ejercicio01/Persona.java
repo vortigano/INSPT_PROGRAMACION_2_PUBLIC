@@ -8,6 +8,15 @@ public class Persona {
   private int añoDeNacimiento;
   private static final int AÑO_MINIMO = 1900;
   
+  public Persona(){};
+  
+  public Persona(String nombre, String apellido, int añoDeNacimiento)
+  {
+    setNombre(nombre);
+    setApellido(apellido);
+    setAñoDeNacimiento(añoDeNacimiento);
+  }
+  
   // devolver el nombre completo de la persona
   public String getNombreCompleto()
   {
