@@ -42,8 +42,32 @@ public class CuentaBancaria {
     }
     setTipoDeCuenta(tipoDeCuenta);
     setSaldo(saldo);
-    this.titular = titular;
-    this.fechaDeApertura = fechaDeApertura;
+    setTitular(titular);
+    setFechaDeApertura(fechaDeApertura);
+  }
+  
+  void setTitular(Persona titular)
+  {
+    if(titular != null)
+    {
+      this.titular = titular;
+    }
+    else
+    {
+      System.out.println("Persona no valida, falta titular");
+    }
+  }
+  
+  void setFechaDeApertura(Fecha fechaDeApertura)
+  {
+    if(fechaDeApertura!=null)
+    {
+      this.fechaDeApertura = fechaDeApertura;
+    }
+    else
+    {
+      System.out.println("Fecha de apertura no valida, falta fecha de apertura");
+    }
   }
   
   private void setSaldo(double saldo)
@@ -109,7 +133,13 @@ public class CuentaBancaria {
 
   @Override
   public String toString() {
-    return "CuentaBancaria{" + "CBU_LEN=" + CBU_LEN + ", cbu=" + cbu + ", tipoDeCuenta=" + tipoDeCuenta + ", saldo=" + saldo + ", titular=" + titular + ", fechaDeApertura=" + fechaDeApertura + '}';
+    return "CuentaBancaria \n" 
+            + " CBU_LEN = " + CBU_LEN 
+            + ", cbu = " + cbu 
+            + ", tipoDeCuenta = " + tipoDeCuenta 
+            + ", saldo = " + saldo 
+            + ",\n titular = " + titular.toString()
+            + "\n fechaDeApertura = " + fechaDeApertura ;
   }
   
   private String crearCBU()

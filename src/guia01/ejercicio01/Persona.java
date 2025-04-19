@@ -58,17 +58,25 @@ public class Persona {
   // Mostrar su estado en la consola.
   public void mostrarEstado()
   {
-      String borde = "******* Persona [" + this + "] *******";
+      //String borde = "******* Persona [" + this + "] *******";
       
-      System.out.println(borde);
-      System.out.println("  ESTADO  ");
-      System.out.println("  Nombre              : " + nombre);
-      System.out.println("  Apellido            : " + apellido);
-      System.out.println("  Anyo de Nacimiento  : " + fechaDeNacimiento.getAnio());
-      domicilio.mostrar();
-      borde = borde.replaceAll(".", "-");
-      System.out.println(borde);
+      //System.out.println(borde);
+      //System.out.println("  ESTADO  ");
+      //System.out.println("  Nombre              : " + nombre);
+      //System.out.println("  Apellido            : " + apellido);
+      //System.out.println("  Anyo de Nacimiento  : " + fechaDeNacimiento.getAnio());
+      //domicilio.mostrar();
+      //borde = borde.replaceAll(".", "-");
+      //System.out.println(borde);
+      toString();
   }
+
+  @Override
+  public String toString() {
+    return "nombre: " + nombre + ", apellido: " + apellido + ",\n fechaDeNacimiento: " + fechaDeNacimiento + ", domicilio: " + domicilio ;
+  }
+  
+  
   
   private int getAñoActual()
   {
