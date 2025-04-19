@@ -18,6 +18,9 @@
 */
 package guia01.ejercicio01;
 
+import guia01.ejercicio04.Fecha;
+import guia01.ejercicio09.Domicilio;
+
 /**
  *
  * @author Alberto Martín Capurro
@@ -29,10 +32,23 @@ public class Principal {
      */
     public static void main(String[] args) {
         Persona persona1 = new Persona();
+        Persona persona2 = new Persona(
+                "Homero",
+                "Simpson",
+                new Fecha(12,5,1990),
+                new Domicilio(
+                        "Siempre Viva",
+                        123,
+                        "Springfield")
+        );
+        persona2.mostrarEstado();
+        System.out.println("Edad: " + persona2.getEdad());
+        
         persona1.mostrarEstado();
         persona1.setApellido("Capurro");
         persona1.setNombre("Martin");
         persona1.setAñoDeNacimiento(1985);
+        persona1.setDomicilio(new Domicilio("Av. Triunvirato", 3000, "Villa Ortuzar"));
         persona1.mostrarEstado();
         persona1.setNombreCompleto("Alberto", "Ojeda");
         persona1.mostrarEstado();

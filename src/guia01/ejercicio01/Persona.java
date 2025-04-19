@@ -1,23 +1,27 @@
 package guia01.ejercicio01;
 
 import guia01.ejercicio04.Fecha;
+import guia01.ejercicio09.Domicilio;
 import java.time.Year;
 
 public class Persona {
   private String nombre;
   private String apellido;
   private Fecha fechaDeNacimiento;
+  private Domicilio domicilio;
   private static final int AÑO_MINIMO = 1900;
   // podrían ir como atributo de fecha luego
   private static final int FECHA_DIA_POR_DEFECTO = 1;
   private static final int FECHA_MES_POR_DEFECTO = 1;
   
   public Persona(){
+    domicilio = new Domicilio();
     setFechaDeNacimiento();
   };
   
   public Persona(String nombre, String apellido, int anyoDeNacimiento)
   {
+    domicilio = new Domicilio();
     setNombre(nombre);
     setApellido(apellido);
     setFechaDeNacimiento();
@@ -26,9 +30,23 @@ public class Persona {
   
   public Persona(String nombre, String apellido, Fecha fechaDeNacimiento)
   {
+    domicilio = new Domicilio();
     setNombre(nombre);
     setApellido(apellido);
-    this.fechaDeNacimiento = fechaDeNacimiento;
+    setFechaDeNacimiento(fechaDeNacimiento);
+  }
+  
+  public Persona(String nombre, String apellido, Fecha fechaDeNacimiento, Domicilio domicilio)
+  {
+    setNombre(nombre);
+    setApellido(apellido);
+    setFechaDeNacimiento(fechaDeNacimiento);
+    setDomicilio(domicilio);
+  }
+  
+  void setDomicilio(Domicilio domicilio)
+  {
+    this.domicilio = domicilio;
   }
   
   // devolver el nombre completo de la persona
@@ -47,6 +65,7 @@ public class Persona {
       System.out.println("  Nombre              : " + nombre);
       System.out.println("  Apellido            : " + apellido);
       System.out.println("  Anyo de Nacimiento  : " + fechaDeNacimiento.getAnio());
+      domicilio.mostrar();
       borde = borde.replaceAll(".", "-");
       System.out.println(borde);
   }
