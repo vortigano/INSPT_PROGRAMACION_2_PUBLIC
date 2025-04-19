@@ -21,6 +21,9 @@
 */
 package guia01.ejercicio03;
 
+import guia01.ejercicio01.Persona;
+import guia01.ejercicio04.Fecha;
+
 /**
  *
  * @author Alberto Martín Capurro
@@ -36,7 +39,11 @@ public class Principal {
                 new CuentaBancaria(
                         "12345678901234589012",
                         TipoDeCuenta.CAJA_DE_AHORRO, 
-                        1000);
+                        1000,
+                        new Persona("Homero", "Simpson", 1990),
+                        new Fecha(12,12,2008)
+                );
+        
         System.out.println(cuenta01.toString());
         cuenta01.depositar(12);
         cuenta01.mostrarDatos();
