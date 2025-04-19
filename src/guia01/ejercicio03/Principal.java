@@ -23,6 +23,7 @@ package guia01.ejercicio03;
 
 import guia01.ejercicio01.Persona;
 import guia01.ejercicio04.Fecha;
+import guia01.ejercicio09.Domicilio;
 
 /**
  *
@@ -35,12 +36,18 @@ public class Principal {
      */
     public static void main(String[] args) {
         //CuentaBancaria cuenta01 = new CuentaBancaria(TipoDeCuenta.CAJA_DE_AHORRO);
+        Persona titularDeCuenta01 = new Persona(
+                "Homero",
+                "Simpson",
+                new Fecha(12,5,1990),
+                new Domicilio("Calle 1", 123, "Barrio Rojo"));
+        
         CuentaBancaria cuenta01 = 
                 new CuentaBancaria(
                         "12345678901234589012",
                         TipoDeCuenta.CAJA_DE_AHORRO, 
                         1000,
-                        new Persona("Homero", "Simpson", 1990),
+                        titularDeCuenta01,
                         new Fecha(12,12,2008)
                 );
         
