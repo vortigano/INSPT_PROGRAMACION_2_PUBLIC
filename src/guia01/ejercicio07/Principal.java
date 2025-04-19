@@ -15,6 +15,8 @@
 */
 package guia01.ejercicio07;
 
+import guia01.ejercicio01.Persona;
+
 /**
  *
  * @author Alberto Martín Capurro
@@ -26,6 +28,13 @@ public class Principal {
    */
   public static void main(String[] args) {
     System.out.println("Ejercicio 07");
+    
+    Robot robot1 = new Robot("robot_01");
+    
+    robot1.Saludar();
+    robot1.Saludar(new Persona("Martin", "Capurro", 1985));
+    robot1.Saludar(new Persona("Magali", "Deniz", 1990));
+    
   }
   
 }
