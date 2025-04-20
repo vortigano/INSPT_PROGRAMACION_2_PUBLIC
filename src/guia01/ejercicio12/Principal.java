@@ -42,22 +42,65 @@ public class Principal {
   public static void main(String[] args) {
     ImpresoraMonocromatica impresora = new ImpresoraMonocromatica();
     
-    int nChars = 0;
-    System.out.printf("Nivel segun chars %d : %d\n", nChars, impresora.nivelSegunCantCaracteres(nChars));
-    nChars = 1;
-    System.out.printf("Nivel segun chars %d : %d\n", nChars, impresora.nivelSegunCantCaracteres(nChars));
-    nChars = 50;
-    System.out.printf("Nivel segun chars %d : %d\n", nChars, impresora.nivelSegunCantCaracteres(nChars));
-    nChars = 49;
-    System.out.printf("Nivel segun chars %d : %d\n", nChars, impresora.nivelSegunCantCaracteres(nChars));
-    nChars = 51;
-    System.out.printf("Nivel segun chars %d : %d\n", nChars, impresora.nivelSegunCantCaracteres(nChars));
-    nChars = 99;
-    System.out.printf("Nivel segun chars %d : %d\n", nChars, impresora.nivelSegunCantCaracteres(nChars));
-    nChars = 100;
-    System.out.printf("Nivel segun chars %d : %d\n", nChars, impresora.nivelSegunCantCaracteres(nChars));
-    nChars = 101;
-    System.out.printf("Nivel segun chars %d : %d\n", nChars, impresora.nivelSegunCantCaracteres(nChars));
+    // test ImpresoraMonocromatica.recargarBandeja(int)
+    int nHojas = 0;
+    System.out.printf("Cargando... %2d ", nHojas);
+    impresora.recargarBandeja(nHojas);
+    System.out.printf(" cargado: %2d\n", impresora.getCantidadDeHojasActual());
+    nHojas = 10;
+    System.out.printf("Cargando... %2d ", nHojas);
+    impresora.recargarBandeja(nHojas);
+    System.out.printf(" cargado: %2d\n", impresora.getCantidadDeHojasActual());
+    nHojas = 1;
+    System.out.printf("Cargando... %2d ", nHojas);
+    impresora.recargarBandeja(nHojas);
+    System.out.printf(" cargado: %2d\n", impresora.getCantidadDeHojasActual());
+    nHojas = 10;
+    System.out.printf("Cargando... %2d ", nHojas);
+    impresora.recargarBandeja(nHojas);
+    System.out.printf(" cargado: %2d\n", impresora.getCantidadDeHojasActual());
+    nHojas = -4;
+    System.out.printf("Cargando... %2d ", nHojas);
+    impresora.recargarBandeja(nHojas);
+    System.out.printf(" cargado: %2d\n", impresora.getCantidadDeHojasActual());
+    nHojas = 0;
+    System.out.printf("Cargando... %2d ", nHojas);
+    impresora.recargarBandeja(nHojas);
+    System.out.printf(" cargado: %2d\n", impresora.getCantidadDeHojasActual());
+    nHojas = 13;
+    System.out.printf("Cargando... %2d ", nHojas);
+    impresora.recargarBandeja(nHojas);
+    System.out.printf(" cargado: %2d\n", impresora.getCantidadDeHojasActual());
+    nHojas = 1;
+    System.out.printf("Cargando... %2d ", nHojas);
+    impresora.recargarBandeja(nHojas);
+    System.out.printf(" cargado: %2d\n", impresora.getCantidadDeHojasActual());
+    nHojas = 1;
+    System.out.printf("Cargando... %2d ", nHojas);
+    impresora.recargarBandeja(nHojas);
+    System.out.printf(" cargado: %2d\n", impresora.getCantidadDeHojasActual());
+    nHojas = -1;
+    System.out.printf("Cargando... %2d ", nHojas);
+    impresora.recargarBandeja(nHojas);
+    System.out.printf(" cargado: %2d\n", impresora.getCantidadDeHojasActual());
+    
+      // test ImpresoraMonocromatica.nivelSegunCantCaracteres(int)
+//    int nChars = 0;
+//    System.out.printf("Nivel segun chars %d : %d\n", nChars, impresora.nivelSegunCantCaracteres(nChars));
+//    nChars = 1;
+//    System.out.printf("Nivel segun chars %d : %d\n", nChars, impresora.nivelSegunCantCaracteres(nChars));
+//    nChars = 50;
+//    System.out.printf("Nivel segun chars %d : %d\n", nChars, impresora.nivelSegunCantCaracteres(nChars));
+//    nChars = 49;
+//    System.out.printf("Nivel segun chars %d : %d\n", nChars, impresora.nivelSegunCantCaracteres(nChars));
+//    nChars = 51;
+//    System.out.printf("Nivel segun chars %d : %d\n", nChars, impresora.nivelSegunCantCaracteres(nChars));
+//    nChars = 99;
+//    System.out.printf("Nivel segun chars %d : %d\n", nChars, impresora.nivelSegunCantCaracteres(nChars));
+//    nChars = 100;
+//    System.out.printf("Nivel segun chars %d : %d\n", nChars, impresora.nivelSegunCantCaracteres(nChars));
+//    nChars = 101;
+//    System.out.printf("Nivel segun chars %d : %d\n", nChars, impresora.nivelSegunCantCaracteres(nChars));
   }
   
 }
