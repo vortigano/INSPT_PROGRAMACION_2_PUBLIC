@@ -46,12 +46,23 @@ public class Principal {
     
     Documento doc01 = new Documento( new Fecha(1, 1, 1900),
             "Titulo aqui",
-            "Cuerpo aca"
+            "0123456"
     );
     
     doc01.mostrarDocumento();
     
+    //System.out.println("n chars cuerpo: "+ doc01.getNCharsCuerpo());
+    impresora.encender();
     
+    impresora.recargarBandeja(2);
+    impresora.mostrarNivelDeTinta();
+    System.out.println("--- Impresion 1");
+    impresora.imprimir(doc01);
+    impresora.mostrarNivelDeTinta();
+    System.out.println("--- Impresion 2");
+    impresora.imprimir(doc01);
+    impresora.mostrarNivelDeTinta();
+    impresora.apagar();
     
     // test ImpresoraMonocromatica.recargarBandeja(int)
 //    int nHojas = 0;

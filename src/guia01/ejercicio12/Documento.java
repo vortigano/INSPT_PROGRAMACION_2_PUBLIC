@@ -18,6 +18,20 @@ public class Documento {
     this.cuerpo         = cuerpo;
   }
   
+  public String getFecha()
+  {
+    return fechaDocumento.toString();
+  }
+  public String getTitulo()
+  {
+    return titulo.toString();
+  }
+  
+  public String getCuerpo()
+  {
+    return cuerpo.toString();
+  }
+  
 //  public void mostrarFecha()
 //  {
 //    System.out.println(fechaDocumento.toString());
@@ -38,6 +52,11 @@ public class Documento {
   public void mostrarDocumento()
   {
     System.out.println(toString());
+  }
+  
+  public int getNCharsCuerpo()
+  {
+    return cuerpo.length();
   }
   
   @Override
