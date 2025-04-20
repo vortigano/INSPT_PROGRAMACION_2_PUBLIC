@@ -1,0 +1,31 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>80</x><y>50</y><w>320</w><h>90</h></coordinates><panel_attributes>Posnet
+--
+_+ RECARGO_POR_CUOTA: double = 0.03_
+_+ MIN_CANT_CUOTAS: int = 1_
+_+ MAX_CANT_CUOTAS: int = 6_
+--
++ efectuarPago(TarjetaDeCredito, double, int): Ticket</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>80</x><y>250</y><w>210</w><h>100</h></coordinates><panel_attributes>TarjetaDeCredito
+--
+- entidadBancaria: String
+- numero: String
+- saldo: double</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>530</x><y>250</y><w>140</w><h>90</h></coordinates><panel_attributes>&lt;&lt;enum&gt;&gt;
+EntidadFinanciera
+--
++ VISA
++ MASTERCARD
++ MAESTRO
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>280</x><y>290</y><w>270</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+m1=1
+- entidadFinanciera</panel_attributes><additional_attributes>250;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>530</x><y>430</y><w>210</w><h>120</h></coordinates><panel_attributes>Persona
+--
+- dni: String
+- nombre: String
+- apellido: String
+- telefono: String
+- mail: String</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>270</x><y>340</y><w>280</w><h>160</h></coordinates><panel_attributes>lt=&lt;-
+m1=1
+- titular</panel_attributes><additional_attributes>260;130;10;130;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>530</x><y>50</y><w>210</w><h>90</h></coordinates><panel_attributes>Ticket
+--
+- nombreApellido: String
+- montoTotal: double
+- montoPorCuota: double</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>170</x><y>130</y><w>30</w><h>140</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>10;120;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>390</x><y>100</y><w>160</w><h>30</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>140;10;10;10</additional_attributes></element></diagram>
