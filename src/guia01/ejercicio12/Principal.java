@@ -30,6 +30,8 @@
 */
 package guia01.ejercicio12;
 
+import guia01.ejercicio04.Fecha;
+
 /**
  *
  * @author Alberto Martín Capurro
@@ -42,47 +44,56 @@ public class Principal {
   public static void main(String[] args) {
     ImpresoraMonocromatica impresora = new ImpresoraMonocromatica();
     
+    Documento doc01 = new Documento( new Fecha(1, 1, 1900),
+            "Titulo aqui",
+            "Cuerpo aca"
+    );
+    
+    doc01.mostrarDocumento();
+    
+    
+    
     // test ImpresoraMonocromatica.recargarBandeja(int)
-    int nHojas = 0;
-    System.out.printf("Cargando... %2d ", nHojas);
-    impresora.recargarBandeja(nHojas);
-    System.out.printf(" cargado: %2d\n", impresora.getCantidadDeHojasActual());
-    nHojas = 10;
-    System.out.printf("Cargando... %2d ", nHojas);
-    impresora.recargarBandeja(nHojas);
-    System.out.printf(" cargado: %2d\n", impresora.getCantidadDeHojasActual());
-    nHojas = 1;
-    System.out.printf("Cargando... %2d ", nHojas);
-    impresora.recargarBandeja(nHojas);
-    System.out.printf(" cargado: %2d\n", impresora.getCantidadDeHojasActual());
-    nHojas = 10;
-    System.out.printf("Cargando... %2d ", nHojas);
-    impresora.recargarBandeja(nHojas);
-    System.out.printf(" cargado: %2d\n", impresora.getCantidadDeHojasActual());
-    nHojas = -4;
-    System.out.printf("Cargando... %2d ", nHojas);
-    impresora.recargarBandeja(nHojas);
-    System.out.printf(" cargado: %2d\n", impresora.getCantidadDeHojasActual());
-    nHojas = 0;
-    System.out.printf("Cargando... %2d ", nHojas);
-    impresora.recargarBandeja(nHojas);
-    System.out.printf(" cargado: %2d\n", impresora.getCantidadDeHojasActual());
-    nHojas = 13;
-    System.out.printf("Cargando... %2d ", nHojas);
-    impresora.recargarBandeja(nHojas);
-    System.out.printf(" cargado: %2d\n", impresora.getCantidadDeHojasActual());
-    nHojas = 1;
-    System.out.printf("Cargando... %2d ", nHojas);
-    impresora.recargarBandeja(nHojas);
-    System.out.printf(" cargado: %2d\n", impresora.getCantidadDeHojasActual());
-    nHojas = 1;
-    System.out.printf("Cargando... %2d ", nHojas);
-    impresora.recargarBandeja(nHojas);
-    System.out.printf(" cargado: %2d\n", impresora.getCantidadDeHojasActual());
-    nHojas = -1;
-    System.out.printf("Cargando... %2d ", nHojas);
-    impresora.recargarBandeja(nHojas);
-    System.out.printf(" cargado: %2d\n", impresora.getCantidadDeHojasActual());
+//    int nHojas = 0;
+//    System.out.printf("Cargando... %2d ", nHojas);
+//    impresora.recargarBandeja(nHojas);
+//    System.out.printf(" cargado: %2d\n", impresora.getCantidadDeHojasActual());
+//    nHojas = 10;
+//    System.out.printf("Cargando... %2d ", nHojas);
+//    impresora.recargarBandeja(nHojas);
+//    System.out.printf(" cargado: %2d\n", impresora.getCantidadDeHojasActual());
+//    nHojas = 1;
+//    System.out.printf("Cargando... %2d ", nHojas);
+//    impresora.recargarBandeja(nHojas);
+//    System.out.printf(" cargado: %2d\n", impresora.getCantidadDeHojasActual());
+//    nHojas = 10;
+//    System.out.printf("Cargando... %2d ", nHojas);
+//    impresora.recargarBandeja(nHojas);
+//    System.out.printf(" cargado: %2d\n", impresora.getCantidadDeHojasActual());
+//    nHojas = -4;
+//    System.out.printf("Cargando... %2d ", nHojas);
+//    impresora.recargarBandeja(nHojas);
+//    System.out.printf(" cargado: %2d\n", impresora.getCantidadDeHojasActual());
+//    nHojas = 0;
+//    System.out.printf("Cargando... %2d ", nHojas);
+//    impresora.recargarBandeja(nHojas);
+//    System.out.printf(" cargado: %2d\n", impresora.getCantidadDeHojasActual());
+//    nHojas = 13;
+//    System.out.printf("Cargando... %2d ", nHojas);
+//    impresora.recargarBandeja(nHojas);
+//    System.out.printf(" cargado: %2d\n", impresora.getCantidadDeHojasActual());
+//    nHojas = 1;
+//    System.out.printf("Cargando... %2d ", nHojas);
+//    impresora.recargarBandeja(nHojas);
+//    System.out.printf(" cargado: %2d\n", impresora.getCantidadDeHojasActual());
+//    nHojas = 1;
+//    System.out.printf("Cargando... %2d ", nHojas);
+//    impresora.recargarBandeja(nHojas);
+//    System.out.printf(" cargado: %2d\n", impresora.getCantidadDeHojasActual());
+//    nHojas = -1;
+//    System.out.printf("Cargando... %2d ", nHojas);
+//    impresora.recargarBandeja(nHojas);
+//    System.out.printf(" cargado: %2d\n", impresora.getCantidadDeHojasActual());
     
       // test ImpresoraMonocromatica.nivelSegunCantCaracteres(int)
 //    int nChars = 0;
