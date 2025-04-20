@@ -44,7 +44,7 @@ public class Persona {
     setDomicilio(domicilio);
   }
   
-  void setDomicilio(Domicilio domicilio)
+  public void setDomicilio(Domicilio domicilio)
   {
     this.domicilio = domicilio;
   }
