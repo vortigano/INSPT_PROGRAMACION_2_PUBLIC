@@ -27,12 +27,16 @@ public class Posnet {
     
     private boolean datosValidos(TarjetaDeCredito tarjeta, double monto, int cuotas)
     {
-      return true; //falta hacer...
+      boolean esTarjetaValida = tarjeta != null;
+      boolean esMontoValido   = monto > 0;
+      boolean esCuotasValidas = cuotas >= MIN_CANT_CUOTAS && cuotas <= MAX_CANT_CUOTAS;
+      
+      return esTarjetaValida && esMontoValido && esCuotasValidas;
     }
     
     private double recargoSegunCuotas(int cuotas)
     {
-      return 0.0; //falta hacer...
+      return (cuotas - 1) * RECARGO_POR_CUOTA;
     }
 
 }

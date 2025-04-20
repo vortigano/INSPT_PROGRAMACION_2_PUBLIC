@@ -14,7 +14,7 @@ public class Principal {
         Posnet posnet = new Posnet();
         Persona p = new Persona("Juan", "Lopez", new Fecha(10, 5, 1990),
                 new Domicilio("Calle falsa", 1234, "Barrio Seguro"));
-        TarjetaDeCredito t = new TarjetaDeCredito("BancoFalso", "123456789", 1500,
+        TarjetaDeCredito t = new TarjetaDeCredito("BancoFalso", "123456789", 15000,
                 EntidadFinanciera.VISA, p);
         
         System.out.println("Tarjeta antes del pago: ");

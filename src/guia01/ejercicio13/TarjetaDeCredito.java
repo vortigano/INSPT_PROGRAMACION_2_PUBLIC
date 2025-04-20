@@ -31,7 +31,7 @@ public class TarjetaDeCredito {
   
   public String nombreCompletoDelTitular()
   {
-    return "test name";
+    return titular.getNombreCompleto();
   }
   
   @Override
