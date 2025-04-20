@@ -40,7 +40,24 @@ public class Principal {
    * @param args the command line arguments
    */
   public static void main(String[] args) {
-    // TODO code application logic here
+    ImpresoraMonocromatica impresora = new ImpresoraMonocromatica();
+    
+    int nChars = 0;
+    System.out.printf("Nivel segun chars %d : %d\n", nChars, impresora.nivelSegunCantCaracteres(nChars));
+    nChars = 1;
+    System.out.printf("Nivel segun chars %d : %d\n", nChars, impresora.nivelSegunCantCaracteres(nChars));
+    nChars = 50;
+    System.out.printf("Nivel segun chars %d : %d\n", nChars, impresora.nivelSegunCantCaracteres(nChars));
+    nChars = 49;
+    System.out.printf("Nivel segun chars %d : %d\n", nChars, impresora.nivelSegunCantCaracteres(nChars));
+    nChars = 51;
+    System.out.printf("Nivel segun chars %d : %d\n", nChars, impresora.nivelSegunCantCaracteres(nChars));
+    nChars = 99;
+    System.out.printf("Nivel segun chars %d : %d\n", nChars, impresora.nivelSegunCantCaracteres(nChars));
+    nChars = 100;
+    System.out.printf("Nivel segun chars %d : %d\n", nChars, impresora.nivelSegunCantCaracteres(nChars));
+    nChars = 101;
+    System.out.printf("Nivel segun chars %d : %d\n", nChars, impresora.nivelSegunCantCaracteres(nChars));
   }
   
 }
