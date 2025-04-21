@@ -1,0 +1,33 @@
+<diagram program="umletino" version="15.1"><zoom_level>17</zoom_level><element><id>UMLClass</id><coordinates><x>306</x><y>0</y><w>306</w><h>204</h></coordinates><panel_attributes>MaquinaDeCafe
+-
+- encendida: boolean
+- marca: String
+-
++ servirCafe(TipoDeCafe): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>306</y><w>289</w><h>153</h></coordinates><panel_attributes>ModuloDeAgua
+-
+- temperatura: double
+- enMantenimiento: boolean
+-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>646</x><y>204</y><w>272</w><h>136</h></coordinates><panel_attributes>ModuloDeLeche
+-
+- cantidad: int
+-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>102</x><y>85</y><w>238</w><h>255</h></coordinates><panel_attributes>lt=&lt;-
+m1=1
+- moduloDeAgua</panel_attributes><additional_attributes>10;130;10;10;120;10</additional_attributes></element><element><id>Relation</id><coordinates><x>595</x><y>68</y><w>272</w><h>170</h></coordinates><panel_attributes>lt=&lt;-
+m1=1
+- moduloDeLeche</panel_attributes><additional_attributes>130;80;130;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>323</x><y>340</y><w>272</w><h>170</h></coordinates><panel_attributes>&lt;&lt;enum&gt;&gt;
+TipoDeCafe
+-
++ EXPRESSO
++ LATTE
++ LAGRIMA
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>646</x><y>493</y><w>272</w><h>170</h></coordinates><panel_attributes>&lt;&lt;enum&gt;&gt;
+TexturaDeLeche
+-
++ LIQUIDA
++ NORMAL
++ ESPUMOSA
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>765</x><y>323</y><w>187</w><h>204</h></coordinates><panel_attributes>lt=&lt;-
+m1=1
+- texturaActual</panel_attributes><additional_attributes>10;100;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>442</x><y>187</y><w>51</w><h>187</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>10;90;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>425</x><y>493</y><w>255</w><h>170</h></coordinates><panel_attributes>lt=&lt;-
+m1=1
+- textura</panel_attributes><additional_attributes>130;70;10;70;10;10</additional_attributes></element></diagram>
