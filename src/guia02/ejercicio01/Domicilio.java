@@ -1,11 +1,10 @@
 package guia02.ejercicio01;
 
 /**
- *
- * @author Charly Cimino
- * Aprendé más Java en mi canal: https://www.youtube.com/c/CharlyCimino
- * Encontrá más código en mi repo de GitHub: https://github.com/CharlyCimino
+ * 
+ * @author Alberto Martín Capurro y Charly Cimino
  */
+
 public class Domicilio {
     private String  calle;
     private int     numero;

@@ -3,11 +3,10 @@ package guia02.ejercicio01;
 import java.time.Year;
 
 /**
- *
- * @author Charly Cimino
- * Aprendé más Java en mi canal: https://www.youtube.com/c/CharlyCimino
- * Encontrá más código en mi repo de GitHub: https://github.com/CharlyCimino
+ * 
+ * @author Alberto Martín Capurro y Charly Cimino
  */
+
 public class Persona {
     // Modelá la clase Persona, la cual posea como atributos nombre, apellido y año de nacimiento. 
     
