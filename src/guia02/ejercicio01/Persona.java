@@ -84,6 +84,11 @@ public class Persona {
     public void setDomicilio(Domicilio domicilio) {
         this.domicilio = domicilio;
     }    
+    
+    public String getBarrio()
+    {
+        return domicilio.getBarrio();
+    }
 
     @Override
     public String toString() {
