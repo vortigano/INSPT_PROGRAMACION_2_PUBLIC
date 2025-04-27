@@ -64,9 +64,15 @@ public class Agenda {
     }
 
     public Persona removerPersona(String DNI) {
-        
-        return null;
-
+      Persona buscada     = buscarPersona(DNI);
+      boolean seEncontro  = buscada != null;
+      
+      if(seEncontro)
+      {
+        this.personas.remove(buscada);
+      }
+      
+      return buscada;
     }
 
     public boolean modificarDomicilio(String DNI, Domicilio nuevo) {

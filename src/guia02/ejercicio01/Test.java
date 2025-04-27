@@ -64,13 +64,13 @@ public class Test {
         
         mostrarLista(agenda.obtenerPorBarrio("Almagro"));
         
-        System.exit(1);
-                
         Persona borrada = agenda.removerPersona("890"); // Chau Valentina Moreno 
-        System.out.printf("Se borró a %s", borrada.nombreCompleto());
+        System.out.printf("Se borró a %s\n", borrada.nombreCompleto());
         
         agenda.listarPersonas(); // Deberían ser 13
         
+        System.exit(1);
+                
         agenda.vaciar();
         
         System.out.printf("Hay %d personas en la agenda", agenda.cantPersonas()); // Deberían ser 0
