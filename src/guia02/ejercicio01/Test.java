@@ -57,10 +57,11 @@ public class Test {
         System.out.println("Debe retornar Diego Ortiz (el ultimo de la lista)");
         System.out.println(agenda.devolverUltimo()); // Retorna a Diego Ortiz
         
-        System.exit(1);
-        
+        System.out.println("Modifica domicilio para persona DNI: 012");
         System.out.println(agenda.modificarDomicilio("012", new Domicilio("Nueva calle", 987, "Almagro")));
-        
+
+        System.exit(1);
+                
         System.out.println( agenda.buscarPersona("012") ); // Retorna a Florencia Medina (con nuevo domicilio)
         
         mostrarLista(agenda.obtenerPorBarrio("Almagro"));

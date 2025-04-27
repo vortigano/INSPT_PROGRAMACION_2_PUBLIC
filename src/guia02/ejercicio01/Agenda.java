@@ -70,9 +70,18 @@ public class Agenda {
     }
 
     public boolean modificarDomicilio(String DNI, Domicilio nuevo) {
-
-        return false;
-
+      //debe buscar persona por dni y luego modificar domicilio
+      Persona buscada           = buscarPersona(DNI);
+      boolean seEncontro        = buscada != null;
+      boolean domicilioValido   = nuevo   != null;
+      boolean modificado        = false;
+      
+      if(seEncontro && domicilioValido)
+      {
+        buscada.setDomicilio(nuevo);
+        modificado  = true;
+      }
+      return modificado;
     }
 
     public ArrayList<Persona> obtenerPorBarrio(String barrio) {
