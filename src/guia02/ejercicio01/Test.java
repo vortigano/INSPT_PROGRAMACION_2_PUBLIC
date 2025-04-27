@@ -59,13 +59,13 @@ public class Test {
         
         System.out.println("Modifica domicilio para persona DNI: 012");
         System.out.println(agenda.modificarDomicilio("012", new Domicilio("Nueva calle", 987, "Almagro")));
-
-        System.exit(1);
-                
+        
         System.out.println( agenda.buscarPersona("012") ); // Retorna a Florencia Medina (con nuevo domicilio)
         
         mostrarLista(agenda.obtenerPorBarrio("Almagro"));
         
+        System.exit(1);
+                
         Persona borrada = agenda.removerPersona("890"); // Chau Valentina Moreno 
         System.out.printf("Se borró a %s", borrada.nombreCompleto());
         

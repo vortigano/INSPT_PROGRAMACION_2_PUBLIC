@@ -85,8 +85,17 @@ public class Agenda {
     }
 
     public ArrayList<Persona> obtenerPorBarrio(String barrio) {
+      //creo una nueva lista y la pueblo con cada persona que pertenezca al barrio solicitado
+      ArrayList<Persona> personasPorBarrio = new ArrayList<Persona>();
 
-        return null;
+      for (Persona persona : this.personas) {
+        if(barrio.equals(persona.getBarrio()))
+        {
+          personasPorBarrio.add(persona);
+        }
+      }
+
+      return personasPorBarrio;
 
     }
 
