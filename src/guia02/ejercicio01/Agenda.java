@@ -106,7 +106,7 @@ public class Agenda {
     }
 
     public void vaciar() {
-
+      this.personas.removeAll(personas);
     }
 
 }
