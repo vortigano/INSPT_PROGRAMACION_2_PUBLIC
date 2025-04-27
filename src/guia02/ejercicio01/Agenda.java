@@ -31,9 +31,12 @@ public class Agenda {
     }
 
     public Persona devolverUltimo() {
-
-        return null;
-
+        Persona pEncontrada = null;
+        
+        if(!personas.isEmpty())
+          pEncontrada = personas.getLast();
+        
+        return pEncontrada;
     }
 
     public Persona buscarPersona(String DNI) {
