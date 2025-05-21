@@ -1,0 +1,20 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>40</x><y>50</y><w>370</w><h>100</h></coordinates><panel_attributes>Inmobiliaria
+--
+
+--
++ promedioDePrecio(): double
++ propiedadesMasEconomicas(): ArrayList&lt;Propiedad&gt;
++ cantidadDePropiedadesSegunTipo(TipoDePropiedad): int</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>640</x><y>230</y><w>140</w><h>80</h></coordinates><panel_attributes>Propiedad
+--
+- domicilio: String
+- precio: double
+--</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>150</x><y>310</y><w>130</w><h>90</h></coordinates><panel_attributes>&lt;&lt;enum&gt;&gt;
+TipoDePropiedad
+--
++ DEPTO
++ CASA
++ PH</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>200</x><y>140</y><w>30</w><h>190</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>10;170;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>270</x><y>300</y><w>460</w><h>90</h></coordinates><panel_attributes>lt=&lt;-
+- tipo
+m1= 1</panel_attributes><additional_attributes>10;60;440;60;440;10</additional_attributes></element><element><id>Relation</id><coordinates><x>400</x><y>80</y><w>350</w><h>170</h></coordinates><panel_attributes>lt=&lt;-
+- propiedades
+m1= 0..*</panel_attributes><additional_attributes>310;150;310;20;10;20</additional_attributes></element></diagram>
