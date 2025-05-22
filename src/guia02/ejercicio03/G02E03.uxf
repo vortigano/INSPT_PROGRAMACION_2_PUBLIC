@@ -1,0 +1,43 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>50</x><y>220</y><w>250</w><h>140</h></coordinates><panel_attributes>Academia
+--
+
+--
++ inscribirAlumno(String, String, String)
++ abrirCurso(String, int)
++ cerrarCurso(String)
++ imprimirListadoDeCursos()
++ imprimirAlumnosPorCurso(String)
++ imprimirAlumnosPorEncimaDe(double)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>200</x><y>30</y><w>360</w><h>140</h></coordinates><panel_attributes>Curso
+--
+- CODIGO_ALFA_NUMERICO: String
+- titulo: String
+- horas: int
+--
++ buscarAlumnosPorEncimaDe(double): ArrayList&lt;Alumno&gt;
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>110</x><y>60</y><w>110</w><h>180</h></coordinates><panel_attributes>lt=&lt;-
+-cursos
+m1=0..*
+m2=1</panel_attributes><additional_attributes>90;10;10;10;10;160</additional_attributes></element><element><id>UMLClass</id><coordinates><x>630</x><y>140</y><w>190</w><h>100</h></coordinates><panel_attributes>Alumno
+--
+- nombre: String
+- DNI: String
+--
++ calcularPromedio(): double
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>360</x><y>340</y><w>160</w><h>100</h></coordinates><panel_attributes>&lt;&lt;enum&gt;&gt;
+TipoDeEvaluacion
+--
++ PRIMER_EXAMEN
++ SEGUNDO_EXAMEN
++ FINAL</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>550</x><y>80</y><w>200</w><h>80</h></coordinates><panel_attributes>lt=&lt;-
+-alumnos
+m1=0..*
+m2=1</panel_attributes><additional_attributes>160;60;160;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>630</x><y>340</y><w>190</w><h>100</h></coordinates><panel_attributes>Evaluacion
+--
+- nota: double
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>700</x><y>230</y><w>110</w><h>130</h></coordinates><panel_attributes>lt=&lt;-
+-evaluaciones
+m1=0..*
+m2=1</panel_attributes><additional_attributes>10;110;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>510</x><y>360</y><w>140</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+-tipo
+m1=1</panel_attributes><additional_attributes>10;20;120;20</additional_attributes></element></diagram>
