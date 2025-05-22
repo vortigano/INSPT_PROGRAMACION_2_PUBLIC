@@ -6,7 +6,7 @@ package guia02.ejercicio03;
  */
 public class Evaluacion {
 
-    private double nota;
-    private TipoDeEvaluacion tipo;
+    private double            nota;
+    private TipoDeEvaluacion  tipo;
 
 }
