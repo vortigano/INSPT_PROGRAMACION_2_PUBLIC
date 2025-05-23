@@ -17,6 +17,8 @@ public class Curso {
     public static final int HORAS_MAX       = 12;
     public static final int HORAS_MIN       =  1;
     public static final String SIN_TITULO   = "Sin titulo";
+    
+    public static final int EVALUACIONES_ENCIMA_DE_PROMEDIO = 2;
 
     public Curso(int horas, String titulo, String codigoAlfaNumerico) {
       this.codigoAlfaNumerico = codigoAlfaNumerico;
@@ -56,9 +58,23 @@ public class Curso {
       }
     }
     
-    public ArrayList<Alumno> buscarAlumnosPorEncimaDe(double promedio) {
-        
-        return null;
+    public ArrayList<Alumno> buscarAlumnosPorEncimaDe(double promedio)
+    {
+      ArrayList<Alumno> alumnosEncontrados = new ArrayList<Alumno>();
+      
+      for (Alumno alumnoEncontrado : alumnos)
+      {
+        if(alumnoEncontrado.cantidadEvaluaciones() >= 
+                EVALUACIONES_ENCIMA_DE_PROMEDIO)
+        {
+          if(alumnoEncontrado.calcularPromedio() > promedio)
+          {
+            alumnosEncontrados.add(alumnoEncontrado);
+          }
+        }
+      }
+      
+      return alumnosEncontrados;
     }
 
 }
