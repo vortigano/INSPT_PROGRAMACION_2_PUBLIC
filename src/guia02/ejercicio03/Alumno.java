@@ -54,15 +54,29 @@ public class Alumno {
       }
     }
     
+    /**
+      La implementación del método calcularPromedio de la clase Alumno,
+      que debe calcular el promedio de dicho alumno entre todas las evaluaciones
+      que haya rendido.
+    */
     public double calcularPromedio()
     {
-        
-      return 0;
+      double promedio = 0;
+      if(!evaluaciones.isEmpty())
+      {
+        for (Evaluacion e : evaluaciones) {
+          promedio += e.getNota();
+        }
+        promedio /= evaluaciones.size();
+      }
+      
+      return promedio;
     }
     
     public void agregarEvaluacion(double nota, TipoDeEvaluacion tipo)
     {
       this.evaluaciones.add(new Evaluacion(nota, tipo));
+      calcularPromedio();
     }
 
 }
