@@ -45,9 +45,19 @@ public class Curso {
     private void setHoras(int horas)
     {
       if(horas > HORAS_MAX)
+      {
         horas = HORAS_MAX;
+        System.out.println("Horas por encima de la maxima " +
+                HORAS_MAX + 
+                ". Se asigna horario por defecto maxima.");
+      }
       else if(horas < HORAS_MIN)
+      {
         horas = HORAS_MIN;
+        System.out.println("Horas por debajo de la minima " +
+                HORAS_MIN + 
+                ". Se asigna horario por defecto minima.");
+      }
       this.horas = horas;
     }
     
