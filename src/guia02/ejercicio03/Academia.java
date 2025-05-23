@@ -19,9 +19,27 @@ public class Academia {
       cursos = new ArrayList<Curso>();
     }
     
-    public void inscribirAlumno(String cursoCodigo, String alumnoNombre, String dni) {
-        // Método a resolver...
+  public void inscribirAlumno(String cursoCodigo, String alumnoNombre, String dni)
+  {
+    if (cursoExisteCodigo(cursoCodigo))
+    {
+      
+      Curso curso = cursos.get(getIndexByCodigo(cursoCodigo));
+      
+      // Validar que no exista un alumno con el mismo DNI
+      boolean existe = curso.existeAlumnoByDNI(dni);
+      
+      if (existe) {
+          System.out.println("Ya existe un alumno con el DNI " + dni + " en el curso.");
+      }
+      else
+      {
+        Alumno nuevoAlumno = new Alumno(alumnoNombre, dni);
+        curso.getAlumnos().add(nuevoAlumno);
+        System.out.println("Alumno " + alumnoNombre + " inscrito en curso " + curso.getTitulo());
+      }
     }
+  }
 
   public void abrirCurso(String cursoTitulo, int horas) 
   {
@@ -177,4 +195,30 @@ public class Academia {
     
     return existe;
   }
+  
+  public void agregarEvaluacion(String cursoCodigo, String dni, double nota, TipoDeEvaluacion tipo)
+  {
+    if (cursoExisteCodigo(cursoCodigo))
+    {
+      Curso curso = cursos.get(getIndexByCodigo(cursoCodigo));
+
+      if(!curso.existeAlumnoByDNI(dni))
+      {
+        System.out.println("No se encontro el alumno con DNI " + dni + " en el curso " + cursoCodigo);
+      }
+      else
+      {
+        int alumnoIndex   = curso.getIndexByDNI(dni);
+        Alumno alumno     = curso.getAlumnos().get(alumnoIndex);
+        alumno.agregarEvaluacion(nota, tipo);
+        System.out.println("Evaluacion agregada a " + alumno.getNombre() + " en curso " + curso.getTitulo());
+      }
+    }
+    else
+    {
+      System.out.println("No se encontro el curso con código " + cursoCodigo);
+    }
+  } 
+
+  
 }
