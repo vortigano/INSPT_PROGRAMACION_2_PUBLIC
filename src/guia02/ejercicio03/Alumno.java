@@ -84,4 +84,8 @@ public class Alumno {
       return evaluaciones.size();
     }
     
+    public double getPromedio()
+    {
+      return calcularPromedio();
+    }
 }
