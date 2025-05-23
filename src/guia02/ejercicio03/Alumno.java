@@ -79,5 +79,9 @@ public class Alumno {
       this.evaluaciones.add(new Evaluacion(nota, tipo));
       calcularPromedio();
     }
-
+    
+    public int cantidadEvaluaciones() {
+      return evaluaciones.size();
+    }
+    
 }
