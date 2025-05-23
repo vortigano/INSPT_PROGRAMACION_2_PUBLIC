@@ -12,7 +12,7 @@ public class Academia {
 
     private ArrayList<Curso> cursos;
     
-    private int codigoCursoCount;
+    private static int codigoCursoCount = 0;
     
     public Academia()
     {
@@ -45,7 +45,7 @@ public class Academia {
         System.out.println(
           curso.getCodigo() + " " + 
           curso.getTitulo() + " " +
-          curso.getHoras() + " Horas");
+          curso.getHoras() + " Hs");
       }
     }
     else
