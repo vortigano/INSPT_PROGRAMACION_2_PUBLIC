@@ -96,4 +96,37 @@ public class Curso {
     {
       return alumnos;
     }
+    
+    public boolean existeAlumnoByDNI(String DNI)
+    {
+      boolean existe = false;
+      
+      for(int i=0; i<alumnos.size() && !existe; i++)
+      {
+        Alumno alumno = alumnos.get(i);
+        if(alumno.getDNI().equals(DNI))
+        {
+          existe = true;
+        }
+      }
+      
+      return existe;
+    }
+    
+    public int getIndexByDNI(String DNI)
+    {
+      boolean found = false;
+      int index = -1;
+      
+      for(int i = 0; i<alumnos.size() && !found; i++)
+      {
+        Alumno alumno = alumnos.get(i);
+        if(alumno.getDNI().equals(DNI))
+        {
+          index = i;
+          found = true;
+        }
+      }
+      return index;
+    }
 }
