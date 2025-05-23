@@ -23,9 +23,21 @@ public class Academia {
         // Método a resolver...
     }
 
-  public void abrirCurso(String cursoTitulo, int horas) {
-    Curso nuevoCurso = new Curso(horas, cursoTitulo, generarCodigoCurso());
-    cursos.add(nuevoCurso);
+  public void abrirCurso(String cursoTitulo, int horas) 
+  {
+    
+    if(!cursoExisteTitulo(cursoTitulo))
+    {
+      Curso nuevoCurso = new Curso(horas, cursoTitulo, generarCodigoCurso());
+      
+      cursos.add(nuevoCurso);
+    }
+    else
+    {
+      System.out.println("No se pudo abrir ese curso");
+    }
+      
+    
   }
   
   private String generarCodigoCurso()
@@ -33,9 +45,26 @@ public class Academia {
     return String.format("%04x", codigoCursoCount++);
   }
 
-    public void cerrarCurso(String cursoCodigo) {
-        // Método a resolver...
+  public void cerrarCurso(String cursoCodigo)
+  {
+    boolean encontrado  = false;
+    Curso   curso       = null;
+    
+    
+    for (int i = 0; i < cursos.size() && !encontrado; i++)
+    {
+      curso = cursos.get(i);
+      if(curso.getCodigo().equals(cursoCodigo))
+      {
+        encontrado = true;
+      }
     }
+    
+    if(encontrado)
+    {
+      cursos.remove(curso);
+    }
+  }
 
   public void imprimirListadoDeCursos()
   {
@@ -55,12 +84,97 @@ public class Academia {
     
   }
 
-    public void imprimirAlumnosPorCurso(String cursoCodigo) {
-        // Método a resolver...
+  public void imprimirAlumnosPorCurso(String cursoCodigo) {
+    
+    if(cursoExisteCodigo(cursoCodigo))
+    {
+      Curso curso = cursos.get(getIndexByCodigo(cursoCodigo));
+      
+      if (curso.getAlumnos().isEmpty()) {
+        System.out.println("El curso no tiene alumnos inscritos.");
+      } 
+      else
+      {
+        for (Alumno alumno : curso.getAlumnos()) {
+          System.out.println("NOMBRE: " + alumno.getNombre() + " " + alumno.getDNI());
+        }
+      }
     }
-
-    public void imprimirAlumnosPorEncimaDe(double promedio) {
-        // Método a resolver...
+    else
+    {
+      System.out.println("No existe el curso solicitado " + cursoCodigo);
     }
+  }
 
+  public void imprimirAlumnosPorEncimaDe(String codigoCurso, double promedio) {
+    if(cursoExisteCodigo(codigoCurso))
+    {
+      Curso curso = cursos.get(getIndexByCodigo(codigoCurso));
+      
+      ArrayList<Alumno> alumnos = curso.buscarAlumnosPorEncimaDe(promedio);
+      
+      if (alumnos.isEmpty()) {
+        System.out.println("No se hallan alumnos por encima del promedio en 2 evaluaciones: " + promedio);
+      } 
+      else
+      {
+        for (Alumno alumno : alumnos) {
+          System.out.println("NOMBRE: " + alumno.getNombre() + " " + alumno.getDNI() + " " + alumno.getPromedio());
+        }
+      }
+      
+    }
+  }
+    
+  private int getIndexByCodigo(String cursoCodigo)
+  {
+    boolean found = false;
+    int     index = -1;
+    Curso   curso;
+    
+    for(int i = 0; i < cursos.size() && !found; i++)
+    {
+      curso = cursos.get(i);
+      if(curso.getCodigo().equals(cursoCodigo))
+      {
+        index = i;
+      }
+    }
+    
+    return  index;
+  }
+    
+  private boolean cursoExisteCodigo(String codigo)
+  {
+    boolean existe  = false;
+    int i = 0;
+    
+    while (i < cursos.size() && !existe) {
+      if (cursos.get(i).getCodigo().equals(codigo))
+      {
+        System.out.println("El curso buscado por codigo " + codigo + " existe");
+        existe = true;
+      }
+      i++;
+    }
+    
+    return existe;
+  }
+
+  private boolean cursoExisteTitulo(String titulo)
+  {
+    boolean existe  = false;
+    int i = 0;
+    
+    while (i < cursos.size() && !existe) {
+      if (cursos.get(i).getTitulo().equals(titulo))
+      {
+        System.out.println("El curso buscado por titulo " + titulo + " existe");
+        existe = true;
+      }
+      i++;
+    }
+    
+    return existe;
+  }
 }
