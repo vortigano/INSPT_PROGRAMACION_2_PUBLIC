@@ -91,5 +91,9 @@ public class Curso {
       
       return alumnosEncontrados;
     }
-
+    
+    public ArrayList<Alumno> getAlumnos()
+    {
+      return alumnos;
+    }
 }
