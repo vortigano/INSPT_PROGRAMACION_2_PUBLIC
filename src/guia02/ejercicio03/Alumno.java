@@ -19,6 +19,7 @@ public class Alumno {
     {
       setNombre(nombre);
       setDNI(DNI);
+      evaluaciones = new ArrayList<Evaluacion>();
     }
     
     public void setNombre(String nombre)
