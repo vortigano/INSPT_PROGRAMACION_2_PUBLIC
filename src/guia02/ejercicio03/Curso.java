@@ -27,6 +27,11 @@ public class Curso {
       this.alumnos            = new ArrayList<Alumno>();
     }
     
+    public String getCodigo()
+    {
+      return codigoAlfaNumerico;
+    }
+    
     public int getHoras()
     {
       return horas;
