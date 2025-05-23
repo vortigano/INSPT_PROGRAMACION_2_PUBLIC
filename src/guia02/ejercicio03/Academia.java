@@ -1,6 +1,8 @@
 package guia02.ejercicio03;
 
 import java.util.ArrayList;
+import java.util.Random;
+import java.util.UUID;
 
 /**
  * 
@@ -9,7 +11,9 @@ import java.util.ArrayList;
 public class Academia {
 
     private ArrayList<Curso> cursos;
-
+    
+    private int codigoCursoCount;
+    
     public Academia()
     {
       cursos = new ArrayList<Curso>();
@@ -19,9 +23,15 @@ public class Academia {
         // Método a resolver...
     }
 
-    public void abrirCurso(String cursoTitulo, int horas) {
-        // Método a resolver...
-    }
+  public void abrirCurso(String cursoTitulo, int horas) {
+    Curso nuevoCurso = new Curso(horas, cursoTitulo, generarCodigoCurso());
+    cursos.add(nuevoCurso);
+  }
+  
+  private String generarCodigoCurso()
+  {
+    return String.format("%04x", codigoCursoCount++);
+  }
 
     public void cerrarCurso(String cursoCodigo) {
         // Método a resolver...
