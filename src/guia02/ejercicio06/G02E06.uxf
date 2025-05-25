@@ -2,8 +2,8 @@
 --
 
 --
-+verPelicula(int,String): VerPeliculaEstado
-+darDeBaja(int)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>440</x><y>70</y><w>210</w><h>60</h></coordinates><panel_attributes>lt=&lt;-
++verPelicula(String,String): VerPeliculaEstado
++darDeBaja(String)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>440</x><y>70</y><w>210</w><h>60</h></coordinates><panel_attributes>lt=&lt;-
 -tipoDeServicio
 m1=1
 m2=1
@@ -31,13 +31,12 @@ TipoDeServicio
 --
 +obtenerSaldo():double</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>520</x><y>250</y><w>200</w><h>120</h></coordinates><panel_attributes>Pelicula
 --
--codigo: int
 -nombre: String
 --
 </panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>520</x><y>450</y><w>200</w><h>120</h></coordinates><panel_attributes>Vista
 --
 -clienteDni: String
--peliculaCodigo: int
+-peliculaNombre: String
 -visualizaciones: int
 --
 </panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>40</x><y>490</y><w>200</w><h>120</h></coordinates><panel_attributes>&lt;&lt;enum&gt;&gt;
