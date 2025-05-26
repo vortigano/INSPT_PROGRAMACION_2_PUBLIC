@@ -1,0 +1,44 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>20</x><y>130</y><w>300</w><h>160</h></coordinates><panel_attributes>Droide
+--
+
+--
++ autoRepararse():ReparacionInforme</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>340</x><y>440</y><w>320</w><h>200</h></coordinates><panel_attributes>&lt;&lt;enum&gt;&gt;
+TipoPieza
+--
++ BATERIA_DE_LITIO ("Bateriadelitio")
++ SENSOR_DE_PROXIMIDAD ("Sensordeproximidad")
++ VISOR_NOCTURNO ("Visornocturno")
++ ORUGA_DE_ACERO ("Orugadeacero")
++ CAMARA_INFRARROJA("CamaradeInfrarrojos")
++ SERVOMOTOR("Servomotor")
++ RADIO("Radio")
+- nombre: String
+--
+-TipoPieza(nombre: String)
++getNombre():String
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>400</x><y>130</y><w>260</w><h>160</h></coordinates><panel_attributes>Pieza
+--
+_+SALUDABLE_MIN: double = 50_
+-salud: double
+--
++esSaludable(): boolean</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>20</x><y>440</y><w>210</w><h>110</h></coordinates><panel_attributes>&lt;&lt;enum&gt;&gt;
+ReparacionInforme
+--
++ COMPLETAMENTE_OPERATIVO
++ REPARACION_PARCIAL
++ REPARACION_IMPOSIBLE
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>70</x><y>30</y><w>510</w><h>120</h></coordinates><panel_attributes>lt=&lt;-
+-regPiezasOperativas
+m1=0..*
+m2=1</panel_attributes><additional_attributes>470;100;470;20;10;20;10;100</additional_attributes></element><element><id>Relation</id><coordinates><x>120</x><y>60</y><w>400</w><h>90</h></coordinates><panel_attributes>lt=&lt;-
+-regPiezasNoOperativas
+m1=0..*
+m2=1</panel_attributes><additional_attributes>360;70;360;20;10;20;10;70</additional_attributes></element><element><id>Relation</id><coordinates><x>60</x><y>280</y><w>220</w><h>110</h></coordinates><panel_attributes>lt=&lt;-
+-regDroides
+m1=0..*
+m2=1</panel_attributes><additional_attributes>180;10;180;90;10;90;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>30</x><y>280</y><w>30</w><h>180</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>10;160;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>480</x><y>280</y><w>50</w><h>180</h></coordinates><panel_attributes>lt=&lt;-
+-tipo
+m1=1
+m2=1
+</panel_attributes><additional_attributes>10;160;10;10</additional_attributes></element></diagram>
