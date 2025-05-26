@@ -1,0 +1,59 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>20</x><y>60</y><w>360</w><h>160</h></coordinates><panel_attributes>Carrera
+--
+_-MATERIAS_APROBADAS_MINIMO = 5_
+_-CANDIDATOS_MAXIMO = 20_
+--
++obtenerCandidatos(double): ArrayList&lt;Candidato&gt;
++candidatoConsiderado(Alumno):boolean
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>400</x><y>350</y><w>140</w><h>110</h></coordinates><panel_attributes>lt=&lt;-
+-tipo
+m1=1
+</panel_attributes><additional_attributes>10;90;10;20;120;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>290</x><y>440</y><w>500</w><h>400</h></coordinates><panel_attributes>&lt;&lt;enum&gt;&gt;
+MateriaTipo
+--
++AN_MATEM_1
++COMPL_DE_FIS_Y_QUIM
++ECON_Y_ORG
++ING_TEC_1
++LABO
++PROG_1
++ALG_PROB_Y_ESTAD
++AN_MATEM_2
++E_Y_BDD
++ING_TEC_2
++MOD_DISC
++PROG_2
++SIS_COMP_1
++ING_TEC_3
++PROBAB_APLIC
++PROBLE_DE_LA_REALIDAD_CONT
++PROGR_3
++SEMINARIO
++SIS_COMP_2
++TEC_DIG
+-nombre:String
+--
+-MateriaTipo(nombre:String)
++getNombre(): String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>520</x><y>300</y><w>170</w><h>120</h></coordinates><panel_attributes>Materia
+--
+-notaFinal: double
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>20</x><y>300</y><w>200</w><h>120</h></coordinates><panel_attributes>Candidato
+--
+-nombre: String
+-mail: String
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>420</x><y>60</y><w>380</w><h>160</h></coordinates><panel_attributes>Alumno
+--
+-nombre: String
+-mail: String
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>610</x><y>210</y><w>170</w><h>110</h></coordinates><panel_attributes>lt=&lt;-
+-listaMateriasAprobadas
+m1=0..*
+m2=1</panel_attributes><additional_attributes>10;90;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>170</x><y>0</y><w>420</w><h>80</h></coordinates><panel_attributes>lt=&lt;-
+-listaAlumnos
+m1=0..*
+m2=1
+
+</panel_attributes><additional_attributes>380;60;380;20;10;20;10;60</additional_attributes></element><element><id>Relation</id><coordinates><x>110</x><y>210</y><w>30</w><h>110</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>10;90;10;10</additional_attributes></element></diagram>
