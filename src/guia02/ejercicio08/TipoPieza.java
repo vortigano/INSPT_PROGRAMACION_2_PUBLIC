@@ -16,12 +16,11 @@ public enum TipoPieza {
     private String nombre;
 
     private TipoPieza(String nombre) {
-        // Constructor a resolver...
+        this.nombre = nombre;
     }
 
     public String getNombre() {
-        // Método a resolver...
-        return "";
+        return nombre;
     }
 
 }
